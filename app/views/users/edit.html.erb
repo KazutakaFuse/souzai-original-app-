@@ -1,0 +1,10 @@
+<h1>id: <%= @user.id %> のユーザー編集ページ</h1>
+
+<%= form_for(@user) do |f| %>
+  <%= f.label :content, 'ユーザー' %>
+  <%= f.text_field :content %>
+
+  <%= f.submit '更新' %>
+<% end %>
+
+<%= link_to '戻る', redirect_back(fallback_location: root_url) %>

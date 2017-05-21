@@ -48,7 +48,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: souzai_production
   username: souzai
   password: <%= ENV['SOUZAI_DATABASE_PASSWORD'] %>

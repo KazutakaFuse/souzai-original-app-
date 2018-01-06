@@ -1,7 +1,9 @@
-<h1>id = <%= @item.id %> の詳細ページ</h1>
+<h1><%= @item.title %></h1>
 
-<img border="0" src="/images/<%= @item.image_url %>" class="sample">
-<p><%= @item.title %></p>
+<img border="0" src="/images/<%= @item.image_url %>" class="sample" width = "480" height = "320">
+<h2>口コミ</h2>
 <p><%= @item.content %></p>
 
-<%= link_to 'レビュー', new_item_review_path(@item, @review) %>
+<%= link_to 'レビューする', new_item_review_path(@item, @review) %>
+<br /><br />
+<%= link_to 'レビュー一覧', item_reviews_path(@item, @review) %>

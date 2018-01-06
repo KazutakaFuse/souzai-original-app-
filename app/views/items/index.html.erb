@@ -1,5 +1,7 @@
 <h1>商品一覧</h1>
 
+<br /><p>ここには、口コミを書くことのできる商品が用意されています。<br />惣菜は、管理人が用意するので、面倒な手間は必要ありません。</p>
+
 <ul>
   <% @items.each do |item| %>
     <li><%= link_to item.id, item %> : </link_to><%= item.title %></li>

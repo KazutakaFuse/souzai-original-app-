@@ -1,14 +1,36 @@
 <% if logged_in? %>
-  <div class="center jumbotron">
-    <div class="text-center">
-      <h1>惣菜レビューのSOUZAIへようこそ</h1>
+  <div class="cover">
+    <div class="cover-inner">
+      <div class="cover-contents">
+        <h1>惣菜レビューのSOUZAIへようこそ</h1>
+        <table>
+          <tr>
+            <td><%= image_tag('/images/humburg.jpg' , :size =>"480x360") %></td>
+            <td><%= image_tag('/images/karaage.jpg' , :size =>"480x360") %></td>
+          </tr>
+        </table>
+        <br />
+        <p>ここでは、我々が日常口にしている惣菜の口コミを書くことができます。<br />まずは、ページ上部のナビバーにある「商品一覧」へ行きましょう。</p>
+      </div>
     </div>
   </div>
 <% else %>
-  <div class="center jumbotron">
-    <div class="text-center">
-      <h1>惣菜レビューのSOUZAIへようこそ</h1>
-      <%= link_to '会員登録', signup_path, class: 'btn btn-lg btn-primary' %>
+  <div class="cover">
+    <div class="cover-inner">
+      <div class="cover-contents">
+        <h1>惣菜レビューのSOUZAIへようこそ</h1>
+        <table>
+          <tr>
+            <td><%= image_tag('/images/humburg.jpg' , :size =>"480x360") %></td>
+            <td><%= image_tag('/images/karaage.jpg' , :size =>"480x360") %></td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <%= link_to '会員登録', signup_path, class: 'btn btn-success btn-lg' %>
+        <%= link_to 'ログイン', login_path, class: 'btn btn-success btn-lg' %>
+        <p>ここでは、我々が日常口にしている惣菜の口コミを書くことができます。<br />まずはログインをお願いします。会員登録が済んでいない方は、会員登録へ</p>
+      </div>
     </div>
   </div>
 <% end %>

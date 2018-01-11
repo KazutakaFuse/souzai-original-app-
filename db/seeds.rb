@@ -1,1 +1,5 @@
 Item.create(:image_url => "beef-curry.jpg", :title => "ビーフカレー", :content => "牛肉の旨みがカレールーによく合います。")
+Item.create(:image_url => "humburg.jpg", :title => "牛肉ハンバーグ", :content => "牛肉100%使用。旨みがしっかり凝縮しています。")
+Item.create(:image_url => "karaage.jpg", :title => "唐揚げ", :content => "外はサクサク、中はジューシーで食べごたえがあります。")
+Item.create(:image_url => "saba.jpg", :title => "さばの塩焼き", :content => "脂の乗ったサバは、いつ食べても美味しい。")
+Item.create(:image_url => "hijiki.jpg", :title => "ひじき", :content => "健康食として人気の高いひじき。ご飯のおかずにも合います")

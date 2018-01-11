@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :require_user_logged_in
   
   def index
-    @items = Item.all
+    @items = Item.all.page(params[:page])
   end
   
   def show

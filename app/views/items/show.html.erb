@@ -1,9 +1,11 @@
-<h1><%= @item.title %></h1>
-
-<img border="0" src="/images/<%= @item.image_url %>" class="sample" width = "480" height = "320">
-<h2>口コミ</h2>
-<p><%= @item.content %></p>
-
-<%= link_to 'レビューする', new_item_review_path(@item, @review) %>
-<br /><br />
-<%= link_to 'レビュー一覧', item_reviews_path(@item, @review) %>
+<div class="row">
+  <aside class="col-xs-6">
+    <h1><%= @item.title %></h1>
+    <img border="0" src="/images/<%= @item.image_url %>" class="sample" width = "480" height = "320">
+    <h2>商品情報</h2>
+      <p><%= @item.content %></p>
+      <%= link_to 'レビューする', new_item_review_path(@item, @review), class: 'btn btn-primary' %>
+      <br /><br />
+      <%= link_to 'レビュー一覧', item_reviews_path(@item, @review), class: 'btn btn-primary' %>
+  </aside>
+</div>

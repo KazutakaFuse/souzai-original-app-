@@ -1,4 +1,7 @@
 <ul class="media-list">
+  <div>
+    <img border="0" src="/images/<%= @item.image_url %>" class="sample" width = "300" height = "225">
+  </div>
   <% @reviews.each do |review| %>
     <% user = review.user %>
     <li class="media">
@@ -20,4 +23,5 @@
       </div>
     </li>
   <% end %>
+  <%= paginate @reviews %>
 </ul>

@@ -2,8 +2,31 @@
 
 <br /><p>ここには、口コミを書くことのできる商品が用意されています。<br />惣菜は、管理人が用意するので、面倒な手間は必要ありません。</p>
 
-<ul>
+<ul class="media-list">
   <% @items.each do |item| %>
-    <li><%= link_to item.id, item %> : </link_to><%= item.title %></li>
+    <div class="row">
+      <aside class="col-xs-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <li class="media">
+              <div class="clearfix">
+              </div>
+              <div>
+                <%= item.id %> : <%= link_to item.title, item %>
+              </div>
+              <br />
+              <div>
+                 <%= item.content %>
+              </div>
+              <div>
+                <%= image_tag(item.image_url,:size =>"200x150") %>
+              </div>
+            </li>
+          </div>
+        </div>
+      </aside>
+    </div>
   <% end %>
+  <%= paginate @items %>
 </ul>
+      

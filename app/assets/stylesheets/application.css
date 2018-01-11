@@ -43,3 +43,6 @@ footer {
   font-weight: bold;
   letter-spacing: 0.15em;
 }
+.icon-text-center {
+  margin: auto;
+}

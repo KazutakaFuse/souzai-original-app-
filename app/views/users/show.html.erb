@@ -1,8 +1,16 @@
-<div class="user-profile">
-  <div class="icon text-center">
-    <img src="<%= gravatar_url(@user, size: 100) %>" alt="" class="img-circle">
+<center>
+  <div class="user-profile">
+    <div class="icon-text-center">
+      <img class="media-object img-rounded img-responsive" src="<%= gravatar_url(@user, size: 100) %>" alt="">
+    </div>
+    <div class="name text-center">
+      <h1><%= @user.name %></h1>
+    </div>
+    <div>
+      <p><%= @user.introduction %></p>
+    </div>
   </div>
-  <div class="name text-center">
-    <h1><%= @user.name %></h1>
-  </div>
-</div>
+  <% if @user == current_user %>
+    <%= link_to 'ユーザー情報を更新', edit_user_path(current_user), class: 'btn btn-primary' %>
+  <% end %>
+</center>

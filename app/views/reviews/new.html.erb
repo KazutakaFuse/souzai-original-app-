@@ -1,8 +1,12 @@
-<h1>レビュー投稿</h1>
+<div class="row">
+  <aside class="col-xs-6">
+    <h1>レビュー投稿</h1>
 
-<%= form_for ([@item, @review]) do |f| %>
-  <%= f.label :content, 'レビュー' %>
-  <%= f.text_area :content, class: 'form-control', rows: 5 %>
-
-  <%= f.submit '投稿' %>
-<% end %>
+    <%= form_for ([@item, @review]) do |f| %>
+      <%= f.label :content, 'レビュー' %>
+      <%= f.text_area :content, class: 'form-control', rows: 5 %>
+      <br />
+      <%= f.submit '投稿' , class: 'btn btn-success btn-lg'%>
+    <% end %>
+  </aside>
+</div>
